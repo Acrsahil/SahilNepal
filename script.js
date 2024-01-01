@@ -1,69 +1,35 @@
-let menuVisible = false;
-//Función que oculta o muestra el menu
-function mostrarOcultarMenu(){
-    if(menuVisible){
-        document.getElementById("nav").classList ="";
-        menuVisible = false;
-    }else{
-        document.getElementById("nav").classList ="responsive";
-        menuVisible = true;
+const inputBox  = document.getElementById("input-box");
+const listContainer  = document.getElementById("list-container");
+function addTask(){
+    if(inputBox.value === ''){
+        alert("You must write something!");
     }
-}
-
-function seleccionar(){
-    //oculto el menu una vez que selecciono una opcion
-    document.getElementById("nav").classList = "";
-    menuVisible = false;
-}
-//Funcion que aplica las animaciones de las habilidades
-function efectoHabilidades(){
-    var skills = document.getElementById("skills");
-    var distancia_skills = window.innerHeight - skills.getBoundingClientRect().top;
-    if(distancia_skills >= 300){
-        let habilidades = document.getElementsByClassName("progreso");
-        habilidades[0].classList.add("javascript");
-        habilidades[1].classList.add("htmlcss");
-        habilidades[2].classList.add("photoshop");
-        habilidades[3].classList.add("wordpress");
-        habilidades[4].classList.add("htmlcss");
-        habilidades[5].classList.add("comunicacion");
-        habilidades[6].classList.add("trabajo");
-        habilidades[7].classList.add("creatividad");
-        habilidades[8].classList.add("dedicacion");
-        habilidades[9].classList.add("proyect");
+    else{
+        let li = document.createElement("li");
+        li.innerHTML = inputBox.value;
+        listContainer.appendChild(li);
+        let span = document.createElement("span");
+        span.innerHTML = "\u00d7";
+        li.appendChild(span);
     }
+    inputBox.value = "";
+    saveData();
 }
+listContainer.addEventListener("click",function(e){
+    if(e.target.tagName === "LI"){
+        e.target.classList.toggle("checked");
+        saveData();
+    }
+    else if(e.target.tagName === "SPAN"){
+        e.target.parentElement.remove();
+        saveData();
+    }
+},false);
 
-
-//detecto el scrolling para aplicar la animacion de la barra de habilidades
-window.onscroll = function(){
-    efectoHabilidades();
-} 
-
-//Download Feature
-function downloadFile() {
-  // create a new element to represent the file
-  var element = document.createElement('a');
-  // set the file's URL and name
-  element.setAttribute('href', 'cv-download/My_CV.pdf');
-  element.setAttribute('download', 'Developer-Sahil-CV.pdf');
-  // simulate a click on the new element to start the download
-  element.style.display = 'none';
-  document.body.appendChild(element);
-  element.click();
-  document.body.removeChild(element);
+function saveData(){
+    localStorage.setItem("data",listContainer.innerHTML)
 }
-
-//Send Mail
-function sendMail() {
-  // create a new element to represent the file
-  var element = document.createElement('a');
-  // set the file's URL and name
-  element.setAttribute('href', 'mailto: acrsahil18@gmail.com');
-  
-  // simulate a click on the new element to start the download
-  element.style.display = 'none';
-  document.body.appendChild(element);
-  element.click();
-  document.body.removeChild(element);
+function showTask(){
+    listContainer.innerHTML = localStorage.getItem("data");
 }
+showTask();
