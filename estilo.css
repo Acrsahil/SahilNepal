@@ -714,3 +714,9 @@ footer .arriba{
         width: 100%;
     }
 }
+/* Add this CSS rule to set equal height for portfolio images */
+.galeria .proyecto img {
+    height: 250px; /* Adjust the height as per your preference */
+    width: 100%; /* Ensure the width takes up the full container */
+    object-fit: cover; /* Maintain aspect ratio while covering the container */
+}
