@@ -8,20 +8,37 @@
 </head>
 <body>
     <div class="container">
-        <div class="todo-app">
-            <h2>To-Do List <img src="icon.png"></h2>
+        <div class="todo-app" id="todo-app-1">
+            <h2>To-Do List 1 <img src="icon.png" alt="icon"></h2>
             <div class="row">
-                <input type="text" id="input-box" placeholder="Add your text">
-                <button onclick="addTask()">Add</button>
+                <input type="text" id="input-box-1" placeholder="Add your text">
+                <button onclick="addTask('list-container-1', 'input-box-1')">Add</button>
             </div>
-            <ul id="list-container">
-                <!-- <li class="checked">Task 1</li>
-                <li>Task 2</li>
-                <li>Task 3</li> -->
+            <ul id="list-container-1">
+                <!-- Tasks will appear here -->
+            </ul>
+        </div>
+        <div class="todo-app" id="todo-app-2">
+            <h2>To-Do List 2 <img src="icon.png" alt="icon"></h2>
+            <div class="row">
+                <input type="text" id="input-box-2" placeholder="Add your text">
+                <button onclick="addTask('list-container-2', 'input-box-2')">Add</button>
+            </div>
+            <ul id="list-container-2">
+                <!-- Tasks will appear here -->
+            </ul>
+        </div>
+        <div class="todo-app" id="todo-app-3">
+            <h2>To-Do List 3 <img src="icon.png" alt="icon"></h2>
+            <div class="row">
+                <input type="text" id="input-box-3" placeholder="Add your text">
+                <button onclick="addTask('list-container-3', 'input-box-3')">Add</button>
+            </div>
+            <ul id="list-container-3">
+                <!-- Tasks will appear here -->
             </ul>
         </div>
     </div>
     <script src="script.js"></script>
 </body>
-
 </html>
