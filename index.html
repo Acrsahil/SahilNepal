@@ -6,12 +6,10 @@
     <title>To Do List App</title>
     <link rel="stylesheet" href="style.css">
 </head>
-     <script src="script.js"></script>
-</body>
 <body>
     <div class="container">
         <div class="todo-app" id="todo-app-1">
-            <h2>To-Do List 1 <img src="icon.png" alt="icon"></h2>
+            <h2>Binod <img src="icon.png" alt="icon"></h2>
             <div class="row">
                 <input type="text" id="input-box-1" placeholder="Add your text">
                 <button onclick="addTask('list-container-1', 'input-box-1')">Add</button>
@@ -19,9 +17,10 @@
             <ul id="list-container-1">
                 <!-- Tasks will appear here -->
             </ul>
+            <button class="submit-button" onclick="submitTasks('list-container-1')">Submit</button>
         </div>
         <div class="todo-app" id="todo-app-2">
-            <h2>To-Do List 2 <img src="icon.png" alt="icon"></h2>
+            <h2>Sahil <img src="icon.png" alt="icon"></h2>
             <div class="row">
                 <input type="text" id="input-box-2" placeholder="Add your text">
                 <button onclick="addTask('list-container-2', 'input-box-2')">Add</button>
@@ -29,9 +28,10 @@
             <ul id="list-container-2">
                 <!-- Tasks will appear here -->
             </ul>
+            <button class="submit-button" onclick="submitTasks('list-container-2')">Submit</button>
         </div>
         <div class="todo-app" id="todo-app-3">
-            <h2>To-Do List 3 <img src="icon.png" alt="icon"></h2>
+            <h2>Tenzin <img src="icon.png" alt="icon"></h2>
             <div class="row">
                 <input type="text" id="input-box-3" placeholder="Add your text">
                 <button onclick="addTask('list-container-3', 'input-box-3')">Add</button>
@@ -39,7 +39,9 @@
             <ul id="list-container-3">
                 <!-- Tasks will appear here -->
             </ul>
+            <button class="submit-button" onclick="submitTasks('list-container-3')">Submit</button>
         </div>
     </div>
-   
+    <script src="script.js"></script>
+</body>
 </html>
