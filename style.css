@@ -1,4 +1,4 @@
-/* *{
+*{
     margin: 0;
     padding: 0;
     font-family: 'Poppins',sans-serif;
@@ -100,7 +100,7 @@ ul li span{
 ul li span:hover{
     background: #edeef0;
 
-} */
+}
 
 
 
@@ -132,6 +132,7 @@ body {
     align-items: center;
 }
 
+
 .todo-app img {
     margin-left: 10px;
 }
@@ -159,7 +160,7 @@ button {
 }
 
 button:hover {
-    background: #218838;
+    background: red;
 }
 
 ul {
@@ -185,6 +186,71 @@ li.checked {
 
 .close {
     cursor: pointer;
-    color: red;
+    color: white;
     margin-left: 10px;
+}
+/* style.css */
+
+/* Style for the cross button */
+.cross-button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.cross-button:hover {
+    color: white;
+}
+
+
+
+/* style.css */
+
+/* Style for the cross button */
+.cross-button {
+    background-color: transparent;
+    border: none;
+    color: red;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.cross-button:hover {
+    color: darkred;
+}
+
+/* Hide the item being dragged */
+.hide {
+    display: none;
+}
+
+/* Style for the dragged item */
+li {
+    list-style-type: none;
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    cursor: move;
+}
+
+/* Style for the drop target */
+li.dragover {
+    border: 2px dashed #ccc;
+}
+
+/* Hide the item being dragged */
+/* Hide the item being dragged */
+.hide {
+    display: none;
+}
+
+/* Style for the drop target */
+li.dragover {
+    border: 2px dashed #28a745;
+    background-color: #79f083;
 }
