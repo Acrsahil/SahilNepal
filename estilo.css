@@ -9,6 +9,12 @@ html{
     /* me permite deslizar cuando hago clic en los links del menu */
     scroll-behavior: smooth;
 }
+#portfolio .galeria .proyeci img,
+#portfolio .galeria .proyecto img {
+    width: 300px;   /* Set a fixed width for the images */
+    height: 200px;  /* Set a fixed height for the images */
+    object-fit: cover;  /* Ensure images fill the dimensions while maintaining aspect ratio */
+}
 /* MENU */
 .contenedor-header{
     background: #1e2326;
