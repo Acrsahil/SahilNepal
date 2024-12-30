@@ -726,3 +726,37 @@ footer .arriba{
     width: 100%; /* Ensure the width takes up the full container */
     object-fit: cover; /* Maintain aspect ratio while covering the container */
 }
+
+
+.contenedor-header header nav ul li a {
+    text-align: none;
+    color: #fff;
+    margin: 0 15px;
+    padding: 3px;
+    position: relative; /* Ensure the link maintains its position */
+    z-index: 10; /* Keep the text on top */
+    transition: .5s;
+    text-decoration: none;
+}
+
+.contenedor-header header nav ul li a:hover {
+    color: #1CB698;
+}
+
+/* Preventing the hover effect from overlapping text */
+.contenedor-header header nav ul li a::before {
+    content: ''; /* Create an element for the hover effect */
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #1CB698;
+    z-index: -1; /* Put the hover effect behind the text */
+    transition: all .3s ease;
+    opacity: 0; /* Initially hidden */
+}
+
+.contenedor-header header nav ul li a:hover::before {
+    opacity: 1; /* Show the hover effect on hover */
+}
