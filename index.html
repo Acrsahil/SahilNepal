@@ -6,111 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Sahil Acharya Official</title>
-    <link rel="stylesheet" href="estilo.css">
-        <style>
-            
-            /* Overall Portfolio Section Styling */
-#portfolio {
-    padding: 40px 20px;
-    background-color: #f9f9f9;
-    text-align: center;
-}
-
-#portfolio h2 {
-    font-size: 2rem;
-    color: #333;
-    margin-bottom: 20px;
-    text-transform: uppercase;
-}
-
-.galeria {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.proyecto {
-    position: relative;
-    width: 320px; /* Slightly increase width for larger images */
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s, box-shadow 0.3s;
-    text-align: center; /* Center the text below the image */
-}
-
-.proyecto img {
-    width: 100%;
-    height: 250px; /* Increase height for larger image */
-    object-fit: cover;
-}
-
-.proyecto:hover {
-    transform: scale(1.05);
-    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-}
-
-/* Text outside the hover effect */
-.proyecto .short-name {
-    margin: 10px 0;
-    font-size: 1.2rem; /* Increase font size slightly for better visibility */
-    font-weight: bold;
-    color: #555;
-    text-transform: capitalize;
-    z-index: 1; /* Ensure the text stays on top and not covered by the hover */
-}
-
-/* Remove text from overlay */
-.proyecto .overlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.6);
-    color: #fff;
-    opacity: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: opacity 0.3s ease-in-out;
-}
-
-.proyecto:hover .overlay {
-    opacity: 1;
-}
-
-.proyecto .overlay h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-}
-
-.proyecto .overlay p {
-    font-size: 1rem;
-}
-.proyecto img {
-    width: 100%;
-    height: 350px; /* Increase height to make the image bigger */
-    object-fit: cover;
-}
-
-
-.proyecto .short-name {
-    margin-top: 10px;
-    font-size: 1.2rem; /* Slightly larger text for better readability */
-    font-weight: bold;
-    color: #555;
-    text-transform: capitalize;
-    text-align: center; /* Center-align the text */
-}
-
-        </style>
-            
+    <link rel="stylesheet" href="css/estilo.css">
+    <link rel="stylesheet" href="css/styles.css">      
 </head>
 <body>
     <!-- MENU ENCABEZADO -->
@@ -128,8 +25,7 @@
                     <li><a href="#portfolio" onclick="seleccionar()">PROJECT</a></li>
                     <li><a href="#contacto" onclick="seleccionar()">CONTACT</a></li>
                     <li><a href="https://www.mountcareintl.com/todolist.php" onclick="seleccionar()">TO DO LIST</a></li>
-
-<!--                     <li><a href="https://www.buymeacoffee.com/nishchalacharya">Buy Me a Coffee</a></li> -->
+                    <!-- <li><a href="https://www.buymeacoffee.com/nishchalacharya">Buy Me a Coffee</a></li> -->
                 </ul>
             </nav>
             <div class="nav-responsive" onclick="mostrarOcultarMenu()">
@@ -141,8 +37,8 @@
     <!-- SECCION INICIO -->
     <section id="inicio" class="inicio">
         <div class="contenido-banner">
-            <div class="contenedor-img">
-                <img src="img/hero.png" alt=""> 
+            <div class="container-img">
+                <img src="assets/img/hero.webp" alt="Sahil Acharya"> 
             </div>
             <h1>SAHIL ACHARYA</h1>
             <div class="redes">
@@ -399,9 +295,8 @@
                         <h4>Sql Developer</h4>
                         <span class="fecha"> 2024</span>
                         <p>During my time as an SQL Developer at Mount Care International from September 2024 to November 2024, I worked on automating the calculation of sales and bonuses. I created SQL views and queries that could quickly calculate both individual and group bonuses, reducing the processing time from 5-6 days to less than a minute. This made the process much faster and more efficient.
-
-I also improved the website's backend by adding the sales and bonus logic directly to the database. This made reporting easier and ensured accurate data for sales teams and managers. My work helped the company save time and make better business decisions with reliable data.
-</p>
+                        I also improved the website's backend by adding the sales and bonus logic directly to the database. This made reporting easier and ensured accurate data for sales teams and managers. My work helped the company save time and make better business decisions with reliable data.
+                        </p>
                         <div class="conectord">
                             <div class="circulod"></div>
                         </div>
@@ -418,7 +313,7 @@ I also improved the website's backend by adding the sales and bonus logic direct
             <div class="galeria">
                 <div class="proyecto">
                     <a href="https://github.com/Acrsahil/PizzaSqlProjects" target="_blank">
-                        <img src="img/virus.jpg" alt="">
+                        <img src="assets/img/virus.jpg" alt="">
                         <div class="overlay">
                             <h3>Getting Insights from Data</h3>
                             <p>Analysis</p>
@@ -428,7 +323,7 @@ I also improved the website's backend by adding the sales and bonus logic direct
                 </div>
                 <div class="proyecto">
                     <a href="https://github.com/Acrsahil/SQL-Project" target="_blank">
-                        <img src="img/mail.jpg" alt="">
+                        <img src="assets/img/mail.jpg" alt="">
                         <div class="overlay">
                             <h3>Solved Complex Business Problems</h3>
                             <p>SQL</p>
@@ -438,7 +333,7 @@ I also improved the website's backend by adding the sales and bonus logic direct
                 </div>
                 <div class="proyecto">
                     <a href="https://github.com/Acrsahil/Cyber-Security/blob/main/mailclient/main.py" target="_blank">
-                        <img src="img/mail.webp" alt="">
+                        <img src="assets/img/mail.webp" alt="">
                         <div class="overlay">
                             <h3>Mailing Client</h3>
                             <p>Mail</p>
@@ -448,7 +343,7 @@ I also improved the website's backend by adding the sales and bonus logic direct
                 </div>
                 <div class="proyecto">
                     <a href="https://github.com/Acrsahil/Auto-Git" target="_blank">
-                        <img src="img/github.webp" alt="">
+                        <img src="assets/img/github.webp" alt="">
                         <div class="overlay">
                             <h3>GitHub Automation</h3>
                             <p>Tool</p>
@@ -479,7 +374,7 @@ I also improved the website's backend by adding the sales and bonus logic direct
                 </div>
                 <!-- Mapa -->
                 <div class="col">
-                    <img src="img/ubicacion.png" alt="">
+                    <img src="assets/img/ubicacion.png" alt="">
                     <div class="info">
                         <ul>
                             <li>
@@ -507,14 +402,14 @@ I also improved the website's backend by adding the sales and bonus logic direct
             <i class="fa-solid fa-angles-up"></i>
         </a>
         <div class="redes">
-             <a href="https://www.linkedin.com/mwlite/in/sahilacharya"><i class="fa-brands fa-linkedin-in"></i></a>
-                <a href="https://github.com/Acrsahil"><i class="fa-brands fa-github"></i></a>
-                <a href="https://www.facebook.com/acr.sahil.1"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="https://www.instagram.com/acr_sahil/"><i class="fa fa-brands fa-instagram" aria-hidden="true"></i></a>
-                <a href="https://twitter.com/SahilAcr"><i class="fa-brands fa-twitter"></i></a>
+            <a href="https://www.linkedin.com/mwlite/in/sahilacharya"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/Acrsahil"><i class="fa-brands fa-github"></i></a>
+            <a href="https://www.facebook.com/acr.sahil.1"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/acr_sahil/"><i class="fa fa-brands fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/SahilAcr"><i class="fa-brands fa-twitter"></i></a>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="js/script.js"></script>
 </body>
 </html>
