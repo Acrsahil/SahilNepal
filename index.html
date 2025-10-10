@@ -286,7 +286,7 @@
                         <h3>Work experience</h3>
                         <div class="item der">
                             <h4>Store Manager</h4>
-    <!--                         <span class="casa">source: youtube, school</span> -->
+                            <!-- <span class="casa">source: youtube, school</span> -->
                             <span class="fecha">2019 - 2021</span>
                             <p>Having worked as a Store Manager in Multicare, I gained valuable experience in managing a team and ensuring the smooth operation of the store. It was a challenging role that required me to be organized, detail-oriented, and able to work under pressure. As a manager, I was responsible for overseeing the day-to-day activities of the store, including inventory management, sales tracking, and customer service.</p>
                             <div class="conectord">
@@ -373,17 +373,22 @@
             <h2>Contact</h2>
             <div class="fila">
                 
-                <div class="col">
-                    <input type="text" placeholder="Your name">
-                    <input type="text" placeholder="Phone number">
-                    <input type="text" placeholder="Mail address">
-                    <input type="text" placeholder="Issue">
-                    <textarea name="" id="" cols="30" rows="10" placeholder="Message"></textarea>
-                    <button>
-                        Send Message <i class="fa-solid fa-paper-plane"></i>
-                        <span class="overlay"></span>
-                    </button>
-                </div>
+<form action="submit-handler.php" method="POST" class="col">
+    <input type="text" id="name" name="name" placeholder="Your name" aria-label="Your Name">
+    
+    <input type="tel" id="phone" name="phone" placeholder="Phone number" aria-label="Phone Number">
+    
+    <input type="email" id="email" name="email" placeholder="Mail address" aria-label="Email Address">
+    
+    <input type="text" id="issue" name="issue" placeholder="Issue or Subject" aria-label="Issue or Subject">
+    
+    <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" aria-label="Message"></textarea>
+    
+    <button type="submit">
+        Send Message <i class="fa-solid fa-paper-plane"></i>
+        <span class="overlay"></span>
+    </button>
+</form>
                 <!-- Mapa -->
                 <div class="col">
                     <img src="assets/img/map.webp" alt="map" loading="lazy">

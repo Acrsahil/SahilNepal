@@ -182,3 +182,30 @@ function submitTasks(listContainerId) {
 
     console.log(`Tasks for ${listContainerId}:`, taskArray);
 }
+
+
+
+function downloadFile() {
+    // 1. Define the path to your file. 
+    //    ***CHANGE 'path/to/your/cv.pdf' TO THE ACTUAL LOCATION OF YOUR CV FILE***
+    const fileUrl = '../assets/cv-download/My_CV.pdf'; 
+
+    // 2. Create a temporary anchor (<a>) element
+    const link = document.createElement('a');
+    
+    // 3. Set the 'href' attribute to the file path
+    link.href = fileUrl;
+    
+    // 4. Set the 'download' attribute. This tells the browser 
+    //    to save the file and suggests a filename.
+    link.download = 'My_CV.pdf'; 
+    
+    // 5. Append the link to the document body (necessary for it to work in some browsers)
+    document.body.appendChild(link);
+    
+    // 6. Programmatically click the link to trigger the download
+    link.click();
+    
+    // 7. Clean up: remove the temporary link element
+    document.body.removeChild(link);
+}
