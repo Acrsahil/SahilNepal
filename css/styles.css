@@ -1,14 +1,14 @@
 #portfolio {
-    padding: 40px 20px;
+    padding: 50px 20px;
     background-color: #f9f9f9;
     text-align: center;
+    scroll-margin-top: 30px;
+
 }
 
 #portfolio h2 {
-    font-size: 2rem;
     color: #333;
     margin-bottom: 20px;
-    text-transform: uppercase;
 }
 
 .galeria {
@@ -96,3 +96,4 @@
     text-transform: capitalize;
     text-align: center; /* Center-align the text */
 }
+
