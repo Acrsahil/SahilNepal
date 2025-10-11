@@ -7,12 +7,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.2/css/all.min.css" integrity="sha512-1sCRPdkRXhBV2PBLUdRb4tMg1w2YPf37qatUFeS7zlBy7jJI8Lf4VHwWfZZfpXtYSLy85pkm9GaYVYMfw5BC1A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <title>Sahil Acharya Official</title>
     <link rel="stylesheet" href="css/estilo.css">
-    <link rel="stylesheet" href="css/styles.css">     
+    <link rel="stylesheet" href="css/styles.css">    
 </head>
 <body>
 
     <!-- HEADER -->
-    <div class="contenedor-header">
+    <div class="container-header">
         <header>
             <div class="logo">
                 <a href="#">Sahil</a>
@@ -20,8 +20,8 @@
 
             <nav id="nav">
                 <ul>
-                    <li><a href="#inicio">START</a></li>
-                    <li><a href="#sobremi">ABOUT ME</a></li>
+                    <li><a href="#hero">START</a></li>
+                    <li><a href="#about">ABOUT ME</a></li>
                     <li><a href="#skills">SKILLS</a></li>
                     <li><a href="#curriculum">RESUME</a></li>
                     <li><a href="#portfolio">PROJECT</a></li>
@@ -30,7 +30,7 @@
                 </ul>
             </nav>
 
-            <div class="nav-responsive">
+            <div class="nav-responsive" id="menu-toggle"> 
                 <i class="fa-solid fa-bars"></i>
             </div>
         </header>
@@ -40,13 +40,13 @@
     <main>
 
         <!-- HERO SECTION -->
-        <section id="inicio" class="inicio">
-            <div class="contenido-banner">
+        <section id="hero" class="hero">
+            <div class="content-banner">
                 <div class="container-img">
                     <img src="assets/img/hero.webp" alt="Sahil Acharya" loading="eager"> 
                 </div>
                 <h1>SAHIL ACHARYA</h1>
-                <div class="redes">
+                <div class="networks">
                     <a href="https://www.linkedin.com/mwlite/in/sahilacharya"><i class="fa-brands fa-linkedin-in"></i></a>
                     <a href="https://github.com/Acrsahil"><i class="fa-brands fa-github"></i></a>
                     <a href="https://www.facebook.com/acr.sahil.1"><i class="fa-brands fa-facebook-f"></i></a>
@@ -57,10 +57,10 @@
         </section>
 
         <!-- ABOUT ME SECTION -->
-        <section id="sobremi" class="sobremi">
-            <div class="contenido-seccion">
+        <section id="about" class="about">
+            <div class="content-section">
                 <h2>About me</h2>
-                <p><span>Hi, I'm Sahil Acharya.</span> A computer science student with a keen interest in Data Analytics and SQL development. I enjoy working with data to uncover actionable insights and building efficient database solutions that drive decision-making. From designing complex queries to optimizing database performance, I take pride in solving real-world problems with data-driven approaches. I believe the fusion of analytics and database management is essential for businesses to thrive in today's data-driven world, and I’m excited to contribute to this evolving field.</p>
+                <p><span>Hi, I'm Sahil Acharya.</span> A computer science student with a keen interestt in Data Analytics and SQL development. I enjoy working with data to uncover actionable insights and building efficient database solutions that drive decision-making. From designing complex queries to optimizing database performance, I take pride in solving real-world problems with data-driven approaches. I believe the fusion of analytics and database management is essential for businesses to thrive in today's data-driven world, and I’m excited to contribute to this evolving field.</p>
 
                 <div class="fila">
                     <div class="col">
@@ -86,46 +86,45 @@
                                 <strong>Address</strong>
                                 Makalbari,Nepal
                             </li>
-    <!--                         <li>
+                            <!--<li>
                                 <strong>Post</strong>
                                 <span>Data Analytics</span>
                             </li> -->
                         </ul>
                     </div>
 
-                    <!-- intereses -->
                     <div class="col">
                         <h3>Interests</h3>
-                        <div class="contenedor-intereses">
-                            <div class="interes">
+                        <div class="container-interests">
+                            <div class="interest">
                                 <i class="fa-solid fa-robot"></i>
                                 <span>ML</span>
                             </div>
-                            <div class="interes">
+                            <div class="interest">
                                 <i class="fa-solid fa-headphones"></i>
                                 <span>MUSIC</span>
                             </div>
-                            <div class="interes">
+                            <div class="interest">
                                 <i class="fa-solid fa-plane"></i>
                                 <span>TRAVEL</span>
                             </div>
-                            <div class="interes">
+                            <div class="interest">
                                 <i class="fa-brands fa-linux"></i>
                                 <span>LINUX OS</span>
                             </div>
-                            <div class="interes">
+                            <div class="interest">
                                 <i class="fa-solid fa-person-hiking"></i>
                                 <span>DEPORT</span>
                             </div>
-                            <div class="interes">
+                            <div class="interest">
                                 <i class="fa-solid fa-code"></i>
                                 <span>CODING</span>
                             </div>
-                            <div class="interes">
+                            <div class="interest">
                                 <i class="fa-solid fa-book"></i>
                                 <span>BOOKS</span>
                             </div>
-                            <div class="interes">
+                            <div class="interest">
                                 <i class="fas fa-chart-pie"></i>
                                 <span>BUSINESS</span>
                             </div>
@@ -141,113 +140,113 @@
         </section>
 
         <!-- SKILLS SECTION -->
-       <section class="skills" id="skills">
-    <div class="contenido-seccion">
-        <h2>Skills</h2>
-        <div class="fila">
-            <div class="col">
-                <h3>Technical Skills</h3>
-                
-                <div class="skill">
-                    <span>Cyber Security</span>
-                    <div class="barra-skill">
-                        <div class="progreso javascript"> 
-                            <span>75%</span>
+        <section class="skills" id="skills">
+            <div class="content-section">
+                <h2>Skills</h2>
+                <div class="fila">
+                    <div class="col">
+                        <h3>Technical Skills</h3>
+                        
+                        <div class="skill">
+                            <span>Cyber Security</span>
+                            <div class="barra-skill">
+                                <div class="progreso javascript"> 
+                                    <span>75%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill">
+                            <span>Scripting</span>
+                            <div class="barra-skill">
+                                <div class="progreso htmlcss">
+                                    <span>89%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill">
+                            <span>SQL</span>
+                            <div class="barra-skill">
+                                <div class="progreso photoshop">
+                                    <span>95%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill">
+                            <span>Networking</span>
+                            <div class="barra-skill">
+                                <div class="progreso wordpress">
+                                    <span>81%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill">
+                            <span>Problem Solving</span>
+                            <div class="barra-skill">
+                                <div class="progreso drupal">
+                                    <span>55%</span> </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                
-                <div class="skill">
-                    <span>Scripting</span>
-                    <div class="barra-skill">
-                        <div class="progreso htmlcss">
-                            <span>89%</span>
+                    
+                    <div class="col">
+                        <h3>Professional Skills</h3>
+                        
+                        <div class="skill">
+                            <span>Communication</span>
+                            <div class="barra-skill">
+                                <div class="progreso comunicacion">
+                                    <span>80%</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="skill">
-                    <span>SQL</span>
-                    <div class="barra-skill">
-                        <div class="progreso photoshop">
-                            <span>95%</span>
+                        
+                        <div class="skill">
+                            <span>Teamwork</span>
+                            <div class="barra-skill">
+                                <div class="progreso trabajo">
+                                    <span>70%</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="skill">
-                    <span>Networking</span>
-                    <div class="barra-skill">
-                        <div class="progreso wordpress">
-                            <span>81%</span>
+                        
+                        <div class="skill">
+                            <span>Creativity</span>
+                            <div class="barra-skill">
+                                <div class="progreso creatividad">
+                                    <span>99%</span>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                </div>
-                
-                <div class="skill">
-                    <span>Problem Solving</span>
-                    <div class="barra-skill">
-                        <div class="progreso drupal">
-                            <span>55%</span> </div>
+                        
+                        <div class="skill">
+                            <span>Dedication</span>
+                            <div class="barra-skill">
+                                <div class="progreso dedicacion">
+                                    <span>65%</span>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="skill">
+                            <span>Project Management</span>
+                            <div class="barra-skill">
+                                <div class="progreso proyect">
+                                    <span>94%</span>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="col">
-                <h3>Professional Skills</h3>
-                
-                <div class="skill">
-                    <span>Communication</span>
-                    <div class="barra-skill">
-                        <div class="progreso comunicacion">
-                            <span>80%</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill">
-                    <span>Teamwork</span>
-                    <div class="barra-skill">
-                        <div class="progreso trabajo">
-                            <span>70%</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill">
-                    <span>Creativity</span>
-                    <div class="barra-skill">
-                        <div class="progreso creatividad">
-                            <span>99%</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill">
-                    <span>Dedication</span>
-                    <div class="barra-skill">
-                        <div class="progreso dedicacion">
-                            <span>65%</span>
-                        </div>
-                    </div>
-                </div>
-                
-                <div class="skill">
-                    <span>Project Management</span>
-                    <div class="barra-skill">
-                        <div class="progreso proyect">
-                            <span>94%</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <!-- CURRICULUM SECTION -->
         <section id="curriculum" class="curriculum">
-            <div class="contenido-seccion">
+            <div class="content-section">
                 <h2>Resume</h2>
                 <div class="fila">
                     <div class="col izquierda">
@@ -256,7 +255,7 @@
                             <h4>Secondary level</h4>
                             <span class="casa">Bir Amar Singh</span>
                             <span class="fecha">2016 - 2018</span>
-                            <p>I studied computer engineering at Bir Amar Singh Engineering School. As a student here, I have gained a strong foundation in computer science and engineering principles, as well as practical skills in programming, software development, and hardware design. The school has provided me with a challenging yet supportive learning environment, and I have had the opportunity to work on several interesting projects both independently and in teams.</p>
+                            <p>I studied computer engineering at Bir Amar Singh Engineering School. As a student here, I have gained a strong foundation in computer science and engineering principles, as well as practical skills in programming, software development, and hardware design. The school has provided me with a challenging yet supportive learning environment, and I have had the opportunity to work on several interestting projects both independently and in teams.</p>
                             <div class="conectori">
                                 <div class="circuloi"></div>
                             </div>
@@ -319,7 +318,7 @@
 
         <!-- PORTFOLIO SECTION -->
         <section id="portfolio" class="portfolio">
-            <div class="contenido-seccion">
+            <div class="content-section">
                 <h2>Project</h2>
                 <div class="galeria">
                     <div class="proyecto">
@@ -369,26 +368,26 @@
 
     <!-- CONTACT SECTION -->
     <section id="contacto" class="contacto">
-        <div class="contenido-seccion">
+        <div class="content-section">
             <h2>Contact</h2>
-            <div class="fila">
+            <div class="fila">`
                 
-<form action="submit-handler.php" method="POST" class="col">
-    <input type="text" id="name" name="name" placeholder="Your name" aria-label="Your Name">
-    
-    <input type="tel" id="phone" name="phone" placeholder="Phone number" aria-label="Phone Number">
-    
-    <input type="email" id="email" name="email" placeholder="Mail address" aria-label="Email Address">
-    
-    <input type="text" id="issue" name="issue" placeholder="Issue or Subject" aria-label="Issue or Subject">
-    
-    <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" aria-label="Message"></textarea>
-    
-    <button type="submit">
-        Send Message <i class="fa-solid fa-paper-plane"></i>
-        <span class="overlay"></span>
-    </button>
-</form>
+            <form action="#" method="POST" class="col">
+                <input type="text" id="name" name="name" placeholder="Your name" aria-label="Your Name">
+                
+                <input type="tel" id="phone" name="phone" placeholder="Phone number" aria-label="Phone Number">
+                
+                <input type="email" id="email" name="email" placeholder="Mail address" aria-label="Email Address">
+                
+                <input type="text" id="issue" name="issue" placeholder="Issue or Subject" aria-label="Issue or Subject">
+                
+                <textarea id="message" name="message" cols="30" rows="10" placeholder="Your Message" aria-label="Message"></textarea>
+                
+                <button type="submit">
+                    Send Message <i class="fa-solid fa-paper-plane"></i>
+                    <span class="overlay"></span>
+                </button>
+            </form>
                 <!-- Mapa -->
                 <div class="col">
                     <img src="assets/img/map.webp" alt="map" loading="lazy">
@@ -418,7 +417,7 @@
         <a href="#inicio" class="arriba">
             <i class="fa-solid fa-angles-up"></i>
         </a>
-        <div class="redes">
+        <div class="networks">
             <a href="https://www.linkedin.com/mwlite/in/sahilacharya"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="https://github.com/Acrsahil"><i class="fa-brands fa-github"></i></a>
             <a href="https://www.facebook.com/acr.sahil.1"><i class="fa-brands fa-facebook-f"></i></a>

@@ -4,6 +4,49 @@ document.addEventListener('DOMContentLoaded', (event) => {
     loadTasks('list-container-1');
     loadTasks('list-container-2');
     loadTasks('list-container-3');
+
+
+// 👇 MOVE THESE LISTENERS INSIDE THIS BLOCK 👇
+    
+    document.getElementById('input-box-1').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            addTask('list-container-1', 'input-box-1');
+        }
+    });
+
+    document.getElementById('input-box-2').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            addTask('list-container-2', 'input-box-2');
+        }
+    });
+
+    document.getElementById('input-box-3').addEventListener('keypress', function (e) {
+        if (e.key === 'Enter') {
+            addTask('list-container-3', 'input-box-3');
+        }
+    });
+
+    document.getElementById('submit-button').addEventListener('click', function() {
+        submitTasks('list-container-1');
+        submitTasks('list-container-2');
+        submitTasks('list-container-3');
+    });
+
+
+
+    // Get the menu element by its ID
+    const menu = document.getElementById('nav');
+
+    // Get the hamburger icon element by its class (or give it an ID like 'menu-toggle' in the HTML)
+    // I will use the class for now since you didn't give it an ID in your code, 
+    // but using an ID is better practice for JavaScript access.
+    const toggleButton = document.querySelector('.nav-responsive'); 
+
+    // Add the click listener
+    toggleButton.addEventListener('click', function() {
+        // Toggles the 'responsive' class on the <nav id="nav"> element
+        menu.classList.toggle('responsive'); 
+    });
 });
 
 function addTask(listContainerId, inputBoxId) {
@@ -145,29 +188,7 @@ function loadTasks(listContainerId) {
     });
 }
 
-document.getElementById('input-box-1').addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        addTask('list-container-1', 'input-box-1');
-    }
-});
 
-document.getElementById('input-box-2').addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        addTask('list-container-2', 'input-box-2');
-    }
-});
-
-document.getElementById('input-box-3').addEventListener('keypress', function (e) {
-    if (e.key === 'Enter') {
-        addTask('list-container-3', 'input-box-3');
-    }
-});
-
-document.getElementById('submit-button').addEventListener('click', function() {
-    submitTasks('list-container-1');
-    submitTasks('list-container-2');
-    submitTasks('list-container-3');
-});
 
 function submitTasks(listContainerId) {
     const listContainer = document.getElementById(listContainerId);
@@ -209,3 +230,6 @@ function downloadFile() {
     // 7. Clean up: remove the temporary link element
     document.body.removeChild(link);
 }
+
+
+
