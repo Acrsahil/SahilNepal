@@ -5,9 +5,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
     loadTasks('list-container-2');
     loadTasks('list-container-3');
 
-
-// 👇 MOVE THESE LISTENERS INSIDE THIS BLOCK 👇
-    
     document.getElementById('input-box-1').addEventListener('keypress', function (e) {
         if (e.key === 'Enter') {
             addTask('list-container-1', 'input-box-1');
@@ -30,22 +27,6 @@ document.addEventListener('DOMContentLoaded', (event) => {
         submitTasks('list-container-1');
         submitTasks('list-container-2');
         submitTasks('list-container-3');
-    });
-
-
-
-    // Get the menu element by its ID
-    const menu = document.getElementById('nav');
-
-    // Get the hamburger icon element by its class (or give it an ID like 'menu-toggle' in the HTML)
-    // I will use the class for now since you didn't give it an ID in your code, 
-    // but using an ID is better practice for JavaScript access.
-    const toggleButton = document.querySelector('.nav-responsive'); 
-
-    // Add the click listener
-    toggleButton.addEventListener('click', function() {
-        // Toggles the 'responsive' class on the <nav id="nav"> element
-        menu.classList.toggle('responsive'); 
     });
 });
 
@@ -190,6 +171,8 @@ function loadTasks(listContainerId) {
 
 
 
+
+
 function submitTasks(listContainerId) {
     const listContainer = document.getElementById(listContainerId);
     const tasks = listContainer.getElementsByTagName('li');
@@ -233,3 +216,24 @@ function downloadFile() {
 
 
 
+    // Get the menu element by its ID
+    const menu = document.getElementById('nav');
+
+    // Get the hamburger icon element by its ID
+    const toggleButton = document.getElementById('menu-toggle'); // <-- Using the ID
+
+    // Add the click listener
+    toggleButton.addEventListener('click', function() {
+        // Toggles the 'responsive' class on the <nav id="nav"> element
+        menu.classList.toggle('responsive'); 
+    });
+
+    // You should also consider adding a line to automatically close the menu
+    // when a link is clicked, which is common for single-page sites.
+    // For example:
+    const menuLinks = menu.querySelectorAll('a[href^="#"]'); 
+    menuLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            menu.classList.remove('responsive'); // Hide the menu on link click
+        });
+    });
